@@ -1,0 +1,54 @@
+{
+  "name": "simple-todoist-discord-bot",
+  "version": "1.0.0",
+  "description": "Simple Discord Bot to add tasks to Todoist",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zawnk/simple-todoist-discord-bot.git"
+  },
+  "keywords": [
+    "todoist",
+    "discord",
+    "bot"
+  ],
+  "author": "zonk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zawnk/simple-todoist-discord-bot/issues"
+  },
+  "homepage": "https://github.com/zawnk/simple-todoist-discord-bot#readme",
+  "dependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/lodash": "^4.14.163",
+    "@types/node": "^14.14.6",
+    "axios": "^0.21.0",
+    "discord.js": "^12.4.1",
+    "dotenv": "^8.2.0",
+    "lodash": "^4.17.20",
+    "ts-node": "^9.0.0",
+    "tslint": "^6.1.3"
+  },
+  "devDependencies": {
+    "husky": "^4.3.0",
+    "lint-staged": "^10.5.0",
+    "nodemon": "^2.0.6",
+    "prettier": "^2.1.2",
+    "typescript": "^4.0.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.ts": [
+      "npm run lint",
+      "prettier --single-quote --trailing-comma none --no-semi --write",
+      "git add"
+    ]
+  }
+}

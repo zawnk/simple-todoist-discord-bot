@@ -78,7 +78,7 @@ client.on('message', async (message) => {
 })
 
 async function bootstrap() {
-  await client.login(config.get('DISCORD_BOT_TOKEN'))
+  await client.login(config.get('DISCORD_TOKEN'))
 }
 
 bootstrap()
